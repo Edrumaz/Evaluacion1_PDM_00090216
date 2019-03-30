@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Evaluacion1_PDM_00090216</string>
+    <string name="submit">Enviar</string>
+    <string name="hint_user">Ingrese su Usuario</string>
+    <string name="user">Usuario: </string>
+    <string name="email">Correo: </string>
+    <string name="hint_email">Ingrese su correo: </string>
+    <string name="product_1">Producto #1</string>
+    <string name="product_2">Producto #2</string>
+    <string name="product_3">Producto #3</string>
+    <string name="product_4">Producto #4</string>
+    <string name="product_5">Producto #5</string>
+    <string name="product_6">Producto #6</string>
+    <string name="product_7">Producto #7</string>
+    <string name="product_8">Producto #8</string>
+    <string name="product_9">Producto #9</string>
 </resources>

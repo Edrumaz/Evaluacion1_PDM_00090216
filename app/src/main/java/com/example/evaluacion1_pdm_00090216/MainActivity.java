@@ -8,12 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button mSubmit;
     EditText mUser, mEmail;
-    TextView mProduct1, mProduct2, mProduct3, mProduct4, mProduct5;
-    TextView mProduct6, mProduct7, mProduct8, mProduct9;
+    Button mProduct1, mProduct2, mProduct3, mProduct4, mProduct5;
+    Button mProduct6, mProduct7, mProduct8, mProduct9;
     int counter1 = 0, counter2 = 0, counter3 = 0, counter4 = 0, counter5 = 0;
     int counter6 = 0, counter7 = 0, counter8 = 0, counter9 = 0;
 
@@ -23,7 +23,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         BindView();
-        BindListeners();
+        mProduct1.setOnClickListener(this);
+        mProduct2.setOnClickListener(this);
+        mProduct3.setOnClickListener(this);
+        mProduct4.setOnClickListener(this);
+        mProduct5.setOnClickListener(this);
+        mProduct6.setOnClickListener(this);
+        mProduct7.setOnClickListener(this);
+        mProduct8.setOnClickListener(this);
+        mProduct9.setOnClickListener(this);
 
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,97 +54,71 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(m_intent);
             }
         });
-
-        mProduct1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter1 = counter1 + 1;
-                mProduct1.setText(counter1);
-            }
-        });
-
-        mProduct2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter2 = counter2 + 1;
-                mProduct2.setText(counter2);
-
-            }
-        });
-
-        mProduct3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter3 = counter3 + 1;
-                mProduct3.setText(counter3);
-            }
-        });
-
-        mProduct4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter4 = counter4 + 1;
-                mProduct4.setText(counter4);
-            }
-        });
-
-        mProduct5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter5 = counter5 + 1;
-                mProduct5.setText(counter5);
-            }
-        });
-
-        mProduct6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter6 = counter6 + 1;
-                mProduct6.setText(counter6);
-            }
-        });
-
-        mProduct7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter7 = counter7 + 1;
-                mProduct7.setText(counter7);
-            }
-        });
-
-        mProduct8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter8 = counter8 + 1;
-                mProduct8.setText(counter8);
-            }
-        });
-
-        mProduct9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter9 = counter9 + 1;
-                mProduct9.setText(counter9);
-            }
-        });
     }
-
-    private void BindListeners() {}
-
 
     private void BindView() {
 
         mSubmit = findViewById(R.id.btn_submit);
-        mProduct1 = findViewById(R.id.tv_product1);
-        mProduct2 = findViewById(R.id.tv_product2);
-        mProduct3 = findViewById(R.id.tv_product3);
-        mProduct4 = findViewById(R.id.tv_product4);
-        mProduct5 = findViewById(R.id.tv_product5);
-        mProduct6 = findViewById(R.id.tv_product6);
-        mProduct7 = findViewById(R.id.tv_product7);
-        mProduct8 = findViewById(R.id.tv_product8);
-        mProduct9 = findViewById(R.id.tv_product9);
+        mProduct1 = findViewById(R.id.btn_product1);
+        mProduct2 = findViewById(R.id.btn_product2);
+        mProduct3 = findViewById(R.id.btn_product3);
+        mProduct4 = findViewById(R.id.btn_product4);
+        mProduct5 = findViewById(R.id.btn_product5);
+        mProduct6 = findViewById(R.id.btn_product6);
+        mProduct7 = findViewById(R.id.btn_product7);
+        mProduct8 = findViewById(R.id.btn_product8);
+        mProduct9 = findViewById(R.id.btn_product9);
         mEmail = findViewById(R.id.et_email);
         mUser = findViewById(R.id.et_user);
     }
+
+   @Override
+    public void onClick(View v) {
+       if (v.getId() == R.id.btn_product1) {
+           counter1 ++;
+           String aux_counter = String.valueOf(counter1);
+           mProduct1.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product2) {
+           counter2++;
+           String aux_counter = String.valueOf(counter2);
+           mProduct2.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product3) {
+           counter3++;
+           String aux_counter = String.valueOf(counter3);
+           mProduct3.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product4) {
+           counter4++;
+           String aux_counter = String.valueOf(counter4);
+           mProduct4.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product5) {
+           counter5++;
+           String aux_counter = String.valueOf(counter5);
+           mProduct5.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product6) {
+           counter6++;
+           String aux_counter = String.valueOf(counter6);
+           mProduct6.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product7) {
+           counter7++;
+           String aux_counter = String.valueOf(counter7);
+           mProduct7.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product8) {
+           counter8++;
+           String aux_counter = String.valueOf(counter8);
+           mProduct8.setText(aux_counter);
+
+       } else if (v.getId() == R.id.btn_product9) {
+           counter9++;
+           String aux_counter = String.valueOf(counter9);
+           mProduct9.setText(aux_counter);
+
+       }
+   }
 }
